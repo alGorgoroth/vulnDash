@@ -5,8 +5,13 @@ interface FilterState {
   pluginID: string[];
   affectedCountRange: [number, number];
   vprScoreRange: [number, number];
+  cvssScoreRange: [number, number];
   exploitAvailable: boolean | null;
   newsworthy: boolean | null;
+  remediationStatus: ('Open' | 'In Progress' | 'Closed')[];
+  ageRange: [number, number];
+  assetCriticality: ('High' | 'Medium' | 'Low')[];
+  patchAvailable: boolean | null;
 }
 
 interface FilterContextType {
@@ -20,8 +25,13 @@ const initialFilters: FilterState = {
   pluginID: [],
   affectedCountRange: [0, Infinity],
   vprScoreRange: [0, 10],
+  cvssScoreRange: [0, 10],
   exploitAvailable: null,
   newsworthy: null,
+  remediationStatus: [],
+  ageRange: [0, Infinity],
+  assetCriticality: [],
+  patchAvailable: null,
 };
 
 const FilterContext = createContext<FilterContextType | undefined>(undefined);

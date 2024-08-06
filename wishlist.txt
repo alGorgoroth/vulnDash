@@ -1,0 +1,33 @@
+To Add:
+
+- Search by host
+    - Page for each host with a list of vulnerabiltiies
+        - Clicking on a vulnerability will take you to the vulnerability page
+
+- Search by vulnerability
+    - Page for each vulnerability with a list of hosts
+        - Clicking on a host will take you to the host page
+
+- Vulnerabilities should have a remedaition progress field
+    - A vulnerability can be marked as remediated/in progress/not remediated per hosts
+
+- Hosts should be able to be placed into groups
+    - Groups should have criticality associated with them
+        - Criticality should be able to be changed
+
+- Top 10 vulnerabilities by CVSS score 
+    - Users should be able to override and manually enter scores based on context.
+        - This should be a gear icon on the vulnerability page that will open a modal
+            - This modal should allow the user to enter a score and save it
+                - This should be saved in the database specific to this client's dashboard, not globally.
+                    - This should be saved in a way that allows for the user to override the score for a specific host or vulnerability
+
+- "Action Center" that suggests actions such as "Time for a new scan" or "Remediations are overdue"
+
+- Report generation for for a variety of key moments
+    - Scan Reports
+        - Scan Reports can be generated for a specific host or vulnerability
+            - Scan Reports can be generated for a specific groups
+    - Remediation Reports
+        - Remediation Reports can be generated for a specific host or vulnerability
+            - Remediation Reports can be generated for a specific groups
